@@ -118,11 +118,11 @@ function renderQuestion(){
         container.innerHTML+=`
         <div class="row my-5 d-flex justify-content-center">
                 <div class="col-12 rounded bg-info p-3 text-white h5 question${no} text-center "></div>
-                <div class="col-5  font-weight-bold text-dark rounded m-2 bg-warning p-3 0 text-justify"><span><input type="radio"  class="radio"  name="option${no}" value="option1">A.   &nbsp;&nbsp;<label class="options${no}" for="option1"></label></span></div>
-                <div class="col-5  font-weight-bold text-dark rounded m-2 bg-warning p-3 1 text-justify"><span><input type="radio"  class="radio"  name="option${no}" value="option2">B.   &nbsp;&nbsp;<label class="options${no}" for="option2"></label></span></div>
-                <div class="col-5  font-weight-bold text-dark rounded m-2 bg-warning p-3 2 text-justify"><span><input type="radio"  class="radio" name="option${no}" value="option3">C.   &nbsp;&nbsp;<label class="options${no}" for="option3"></label></span></div>
-                <div class="col-5  font-weight-bold text-dark rounded m-2 bg-warning p-3 3 text-justify"><span><input type="radio" class="radio"  name="option${no}" value="option4">D.   &nbsp;&nbsp;<label class="options${no}" for="option4"></label></span></div>
-                <div class="col-8 correct-answer font-weight-bold d-none rounded m-2 text-white bg-success p-3 3 text-justify"></div>
+                <div class="col-md-5 col-12 font-weight-bold text-dark rounded m-2 bg-warning p-3 0 text-justify"><span><input type="radio"  class="radio"  name="option${no}" value="option1">A.   &nbsp;&nbsp;<label class="options${no}" for="option1"></label></span></div>
+                <div class="col-md-5 col-12 font-weight-bold text-dark rounded m-2 bg-warning p-3 1 text-justify"><span><input type="radio"  class="radio"  name="option${no}" value="option2">B.   &nbsp;&nbsp;<label class="options${no}" for="option2"></label></span></div>
+                <div class="col-md-5 col-12 font-weight-bold text-dark rounded m-2 bg-warning p-3 2 text-justify"><span><input type="radio"  class="radio" name="option${no}" value="option3">C.   &nbsp;&nbsp;<label class="options${no}" for="option3"></label></span></div>
+                <div class="col-md-5 col-12 font-weight-bold text-dark rounded m-2 bg-warning p-3 3 text-justify"><span><input type="radio" class="radio"  name="option${no}" value="option4">D.   &nbsp;&nbsp;<label class="options${no}" for="option4"></label></span></div>
+                <div class="col-md-8 col-11 correct-answer font-weight-bold d-none rounded m-2 text-white bg-success p-3 3 text-justify"></div>
               </div>
         `
 
