@@ -234,6 +234,8 @@ function renderQuestion(){
     let close=document.querySelector("#close")
     close.addEventListener('click',function(){
         document.querySelector("#submit").setAttribute("disabled",true)
+        localStorage.setItem(name,score)
+
 
 
     })
