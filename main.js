@@ -108,7 +108,7 @@ function renderQuestion(){
 
 
     
-    
+    let name=prompt("Enter your name");
     
     let container=document.querySelector("form")
 
@@ -208,6 +208,10 @@ function renderQuestion(){
         }
         
     }
+
+    
+    
+    
         let modal=document.querySelector(".modal-body")
 
         score<3?modal.innerHTML=`Oops! You can try again,Your score is ${score}`:modal.innerHTML=`Well done! Your score is ${score} out of 5`
@@ -217,7 +221,8 @@ function renderQuestion(){
     playAgain.addEventListener('click',function(){
         
 
-    
+        localStorage.setItem(name,score)
+
             location.reload();
 
 
@@ -237,17 +242,12 @@ function renderQuestion(){
        
 })
 
-   
-    
-    
     }    
 
 
 
     
  
-
-
 
 
 
