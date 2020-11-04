@@ -69,7 +69,7 @@ var questions=[{
     answer:[0,1,0,0]
 },
 {
-    question:"Garampani sanctuary is located at ",
+    question:"Which is the largest country out of the given? ",
     options:["USA","Fiji","India","UK"],
     answer:[0,1,0,0]
 },
