@@ -71,7 +71,7 @@ var questions=[{
 {
     question:"Which is the largest country out of the given? ",
     options:["USA","Fiji","India","UK"],
-    answer:[0,1,0,0]
+    answer:[1,0,0,0]
 },
 {
     question:"First Afghan War took place in ",
@@ -113,7 +113,7 @@ function renderQuestion(){
     let container=document.querySelector("form")
 
     for(no=0;no<5;no++){
-        let randomQuestionNo=Math.round(Math.random()*20)
+        let randomQuestionNo=Math.round(Math.random()*19)
 
         container.innerHTML+=`
         <div class="row my-5 d-flex justify-content-center">
@@ -122,6 +122,7 @@ function renderQuestion(){
                 <div class="col-5  font-weight-bold text-dark rounded m-2 bg-warning p-3 1 text-justify"><span><input type="radio"  class="radio"  name="option${no}" value="option2">B.   &nbsp;&nbsp;<label class="options${no}" for="option2"></label></span></div>
                 <div class="col-5  font-weight-bold text-dark rounded m-2 bg-warning p-3 2 text-justify"><span><input type="radio"  class="radio" name="option${no}" value="option3">C.   &nbsp;&nbsp;<label class="options${no}" for="option3"></label></span></div>
                 <div class="col-5  font-weight-bold text-dark rounded m-2 bg-warning p-3 3 text-justify"><span><input type="radio" class="radio"  name="option${no}" value="option4">D.   &nbsp;&nbsp;<label class="options${no}" for="option4"></label></span></div>
+                <div class="col-8 correct-answer font-weight-bold d-none rounded m-2 text-white bg-success p-3 3 text-justify"></div>
               </div>
         `
 
@@ -138,8 +139,11 @@ function renderQuestion(){
         for(i=0;i<optionsDOM.length;i++)
         {
             optionsDOM[i].innerHTML+=questions[randomQuestionNo].options[i];
-            let answer=questions[randomQuestionNo].answer.indexOf(1);
-            optionsDOM[answer].classList.add("answer")
+            let correctAnswer=questions[randomQuestionNo].answer.indexOf(1);
+            optionsDOM[correctAnswer].classList.add("answer")
+            
+            optionsDOM[correctAnswer].parentNode.parentNode.parentNode.lastElementChild.innerHTML=`The correct answer is ${questions[randomQuestionNo].options[correctAnswer]}`
+
 
             
 
@@ -187,6 +191,10 @@ function renderQuestion(){
 
     form.addEventListener('submit',function(e){
         e.preventDefault();
+        let displayAnswer=document.querySelectorAll(".correct-answer")
+        for(dispanswer of displayAnswer){
+            dispanswer.classList.remove("d-none")
+        }
         let radios=document.querySelectorAll('input[type="radio"]')
     // console.log(radios);
     for(radio of radios){
@@ -202,12 +210,26 @@ function renderQuestion(){
     }
         let modal=document.querySelector(".modal-body")
 
-        score<3?modal.innerHTML=`Oops! You can try again,Your score is ${score}`:modal.innerHTML=`Well done! Your score is ${score}`
+        score<3?modal.innerHTML=`Oops! You can try again,Your score is ${score}`:modal.innerHTML=`Well done! Your score is ${score} out of 5`
 
         
         let playAgain=document.querySelector("#play-again")
     playAgain.addEventListener('click',function(){
-        location.reload();
+        
+
+    
+            location.reload();
+
+
+       
+
+
+    })
+
+    let close=document.querySelector("#close")
+    close.addEventListener('click',function(){
+        document.querySelector("#submit").setAttribute("disabled",true)
+
 
     })
 
