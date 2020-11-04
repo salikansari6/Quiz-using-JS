@@ -113,7 +113,7 @@ function renderQuestion(){
     let container=document.querySelector("form")
 
     for(no=0;no<5;no++){
-        let randomQuestionNo=Math.round(Math.random()*19)
+        let randomQuestionNo=Math.round(Math.random()*20)
 
         container.innerHTML+=`
         <div class="row my-5 d-flex justify-content-center">
@@ -206,16 +206,13 @@ function renderQuestion(){
 
         
         let playAgain=document.querySelector("#play-again")
-    // alert("Your score is "+score)
     playAgain.addEventListener('click',function(){
         location.reload();
 
     })
 
 
-        // setTimeout(function(){
-        //     location.reload();
-        // },3000) 
+       
 })
 
    
