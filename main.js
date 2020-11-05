@@ -112,8 +112,29 @@ function renderQuestion(){
     
     let container=document.querySelector("form")
 
+
+
+function generateUniqueQuestion(){
+    var arr=[];
+    //Algo for generating random unique numbers
+        while(arr.length<5){
+            var r=Math.floor(Math.random()*19);
+            if(arr.indexOf(r)===-1) arr.push(r);
+        }
+
+        return arr;
+
+}
+
+    
+
+
     for(no=0;no<5;no++){
-        let randomQuestionNo=Math.round(Math.random()*19)
+
+        
+        
+
+        let randomQuestionNo=generateUniqueQuestion()[no];
 
         container.innerHTML+=`
         <div class="row my-5 d-flex justify-content-center">
