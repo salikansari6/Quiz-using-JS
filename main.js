@@ -115,7 +115,7 @@ function renderQuestion(){
 
 
 function generateUniqueQuestion(){
-    var arr=[];
+    let arr=[];
     //Algo for generating random unique numbers
         while(arr.length<5){
             var r=Math.floor(Math.random()*19);
@@ -127,14 +127,15 @@ function generateUniqueQuestion(){
 }
 
     
-
+    let uniqueArray=generateUniqueQuestion()
+    console.log(uniqueArray)
 
     for(no=0;no<5;no++){
 
         
         
 
-        let randomQuestionNo=generateUniqueQuestion()[no];
+        let randomQuestionNo=uniqueArray[no];
 
         container.innerHTML+=`
         <div class="row my-5 d-flex justify-content-center">
