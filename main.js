@@ -137,6 +137,9 @@ function generateUniqueQuestion(){
 
         let randomQuestionNo=uniqueArray[no];
 
+        
+
+
         container.innerHTML+=`
         <div class="row my-5 d-flex justify-content-center">
                 <div class="col-12 rounded bg-info p-3 text-white h5 question${no} text-center "></div>

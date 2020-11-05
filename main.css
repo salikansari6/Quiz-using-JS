@@ -1,0 +1,11 @@
+#submit {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+form {
+  position: relative;
+  padding-bottom: 30px;
+}
